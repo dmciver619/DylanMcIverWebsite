@@ -1,12 +1,7 @@
 <template>
     <NavBar></NavBar>
-
-    <div class="container py-5 page-title" style="margin-top: 100px; margin-bottom: 200px; background-image: url('./assets/test.jpg'); background-position: center">
-        <h1 class="display-1">Dylan McIver</h1>
-        <h3>.NET Full Stack Software Engineer</h3>
-    </div>
-
-    <hr class="page-breaker" size="5" />
+    <TitleArea></TitleArea>
+    
 
     <div class="container py-5">
         <div class="row">
@@ -141,11 +136,13 @@
 <script>
     // Import Components
     import NavBar from './components/NavBar'
+    import TitleArea from './components/TitleArea'
 
     export default {
         name: 'App',
         components: {
-            NavBar
+            NavBar,
+            TitleArea
         }
     }
 </script>
