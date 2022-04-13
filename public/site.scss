@@ -13,7 +13,7 @@
     $custom-colors: ( "tertiary": $tertiary );
     $theme-colors: map-merge($theme-colors, $custom-colors);
     .bg-tertiary {
-        background-color: darkorange;
+        background-color: #666;
     }
 
     // Required
