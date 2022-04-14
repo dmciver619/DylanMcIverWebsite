@@ -3,7 +3,7 @@
         <h1>test</h1>
         <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
         <svg :viewBox="viewBoxSize" class="svg">
-            <path ref="curve" fill="darkgray" :d="curve">
+            <path ref="curve" fill="#D6994C" :d="curve">
             </path>
         </svg>
     </div>
@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        name: 'NavBar',
+        name: 'TitleArea',
         mounted() {
             window.addEventListener('scroll', this.animate);
             window.addEventListener('resize', this.resizeSvg);
@@ -79,7 +79,11 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+    .container {
+        text-align:center;
+    }
 
     .svg-container {
         position: absolute;
