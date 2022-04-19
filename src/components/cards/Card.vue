@@ -1,30 +1,27 @@
 <template>
-    <TitleCard v-if="type == 'title'" :title="title" :description="description" :imageSrc="imageSrc"></TitleCard>
-    <MainCard v-else-if="type == 'main'" :title="title" :description="description"></MainCard>
-    <TestCard v-else>Error</TestCard>
-
+    <div @click="click" class="card mb-3 bg-primary">
+        <div v-on:click="click" class="card-header">
+            <h3 class="card-title">{{title}}</h3>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{description}}</p>
+            <p v-if="learningPoints">
+                In this project, I learnt:
+                <ul>
+                    <li v-for="learningPoint in learningPoints" :key="learningPoint">{{learningPoint}}</li>
+                </ul>
+            </p>
+        </div>
+        <div v-if="projectLink" class="card-footer">
+            <i class="fa-brands fa-github" /> <a :href="projectLink">Link to {{title}} source code</a>
+        </div>
+    </div>
 </template>
 
 <script>
-    import TitleCard from './TitleCard'
-    import MainCard from './MainCard'
-    import TestCard from './TestCard'
-    
     export default {
         name: 'Card',
-        components: {
-            TitleCard,
-            MainCard,
-            TestCard
-        },
         props: {
-            type: {
-                type: String,
-                required: true,
-                validator: function (data) {
-                    return data == "main" || data == "title" || data == "list";
-                }
-            },
             title: {
                 type: String,
                 required: true
@@ -33,25 +30,34 @@
                 type: String,
                 required: true
             },
-            listItems: {
+            learningPoints: {
                 type: Array,
                 default() {
-                    return [];
+                    return null;
                 }
             },
-            imageSrc: {
+            projectLink: {
                 type: String,
                 default() {
-                    return "";
+                    return null;
                 }
+            }
+        },
+        methods: {
+            click: function () {
+                debugger;
             }
         }
     }
 </script>
 
 <style scoped>
-    h1 {
-        margin-bottom: 0;
+    .card {
+        border: black 3px solid;
     }
 
-    </style>
+    .card-body,
+    .card-footer {
+        background-color: darkgray
+    }
+</style>

@@ -1,0 +1,19 @@
+[
+    {
+        "title": "FINAL YEAR PROJECT",
+        "description": "placeholder",
+        "learningPoints": ["Not", "Yet", "Implemented"]
+    },
+    {
+        "title": "Paintbrush",
+        "description": "Simple idea I implemented, based on a customisable canvas and paintbrush.\nThis project allowed me to learn the basics of Vue.js",
+        "learningPoints": [ "Event Listeners in Vue.js", "Properties in Vue.js", "" ],
+        "projectLink": "https://github.com/dmciver619/PaintBrush"
+    },
+    {
+        "title": "Website",
+        "description": "I used this website to learn web design",
+        "learningPoints": [ "Bootstrap", "Vue.js", "Animations on a webpage" ],
+        "projectLink": "https://github.com/dmciver619/DylanMcIverWebsite"
+    }
+]

@@ -1,16 +1,17 @@
 <template>
-    <div ref="titleSvg" class="svg-container">
-        <h1>test</h1>
-        <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
-        <svg :viewBox="viewBoxSize" class="svg">
-            <path ref="curve" fill="#D6994C" :d="curve">
-            </path>
-        </svg>
-    </div>
+    <div id="title">
+        <div ref="titleSvg" class="svg-container">
+            <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+            <svg :viewBox="viewBoxSize" class="svg">
+                <path ref="curve" fill="#D6994C" :d="curve">
+                </path>
+            </svg>
+        </div>
 
-    <div class="container py-5 page-title" style="margin-top: 100px; margin-bottom: 200px; background-image: url('./assets/test.jpg'); background-position: center">
-        <h1 class="display-1">Dylan McIver</h1>
-        <h3>.NET Full Stack Software Engineer</h3>
+        <div class="container py-5 page-title" style="background-position: center">
+            <h1 class="display-1">Dylan McIver</h1>
+            <h3>.NET Full Stack Software Engineer</h3>
+        </div>
     </div>
 </template>
 
@@ -48,7 +49,7 @@
                     return;
                 }
 
-                if (window.scrollY >= 0 /*&& window.scrollY < this.defaultCurveValue*/) {
+                if (window.scrollY >= 0) {
                     this.curveValue = this.defaultCurveValue - (window.scrollY / this.curveRate);
                     this.resizeSvg();
                 }
@@ -81,8 +82,13 @@
 
 <style lang="scss" scoped>
 
+    #title {
+        padding-bottom: 200px;
+    }
+
     .container {
         text-align:center;
+        background: none;
     }
 
     .svg-container {
@@ -91,6 +97,8 @@
         right: 0;
         left: 0;
         z-index: -1;
+        background-color: #090909;
+        padding-bottom: 200px;
     }
 
     svg {
