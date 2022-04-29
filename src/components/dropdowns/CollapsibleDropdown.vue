@@ -32,7 +32,7 @@
         name: 'Card',
         props: {
             dropdownJson: {
-                type: String,
+                type: Object,
                 required: true
             }
         },

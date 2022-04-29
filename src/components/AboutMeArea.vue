@@ -27,9 +27,7 @@
                     <h5>Who am I</h5>
                     <ul>
                         <li>A full-stack programmer with a passion for learning and writing efficient and clean code</li>
-                        <li></li>
                     </ul>
-
                     <hr size="5" />
                 </div>
             </div>

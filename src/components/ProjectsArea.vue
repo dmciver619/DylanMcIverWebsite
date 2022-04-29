@@ -27,7 +27,7 @@
     require('../assets/backgrounds/projects.jpg');
 
     import Card from './cards/Card'
-    import ProjectsJson from '../assets/projects'
+    import ProjectsJson from '../assets/json/projects'
 
     export default {
         name: 'ProjectsArea',
